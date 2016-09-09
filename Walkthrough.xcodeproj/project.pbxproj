@@ -12,6 +12,8 @@
 		27AD28B51D8262CC0058612C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27AD28B31D8262CC0058612C /* Main.storyboard */; };
 		27AD28B71D8262CC0058612C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27AD28B61D8262CC0058612C /* Assets.xcassets */; };
 		27AD28BA1D8262CC0058612C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27AD28B81D8262CC0058612C /* LaunchScreen.storyboard */; };
+		27AD28C21D8264800058612C /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AD28C11D8264800058612C /* PageCell.swift */; };
+		27AD28C41D82649A0058612C /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AD28C31D82649A0058612C /* Page.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		27AD28B61D8262CC0058612C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27AD28B91D8262CC0058612C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27AD28BB1D8262CC0058612C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27AD28C11D8264800058612C /* PageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
+		27AD28C31D82649A0058612C /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				27AD28B61D8262CC0058612C /* Assets.xcassets */,
 				27AD28B81D8262CC0058612C /* LaunchScreen.storyboard */,
 				27AD28BB1D8262CC0058612C /* Info.plist */,
+				27AD28C11D8264800058612C /* PageCell.swift */,
+				27AD28C31D82649A0058612C /* Page.swift */,
 			);
 			path = Walkthrough;
 			sourceTree = "<group>";
@@ -137,6 +143,8 @@
 			files = (
 				27AD28B21D8262CC0058612C /* ViewController.swift in Sources */,
 				27AD28B01D8262CC0058612C /* AppDelegate.swift in Sources */,
+				27AD28C41D82649A0058612C /* Page.swift in Sources */,
+				27AD28C21D8264800058612C /* PageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
