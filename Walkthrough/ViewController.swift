@@ -8,8 +8,6 @@
 
 import UIKit
 
-import UIKit
-
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     lazy var collectionView: UICollectionView = {
@@ -45,19 +43,44 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return pc
     }()
     
-    let skipButton: UIButton = {
+    lazy var skipButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Skip", for: .normal)
         button.setTitleColor(UIColor(red: 247/255, green: 154/255, blue: 27/255, alpha: 1), for: .normal)
+        button.addTarget(self, action: #selector(skip), for: .touchUpInside)
         return button
     }()
     
-    let nextButton: UIButton = {
+    func skip() {
+        pageControl.currentPage = pages.count - 1
+        nextPage()
+    }
+    
+    lazy var nextButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Next", for: .normal)
         button.setTitleColor(UIColor(red: 247/255, green: 154/255, blue: 27/255, alpha: 1), for: .normal)
+        button.addTarget(self, action: #selector(nextPage), for: .touchUpInside)
         return button
     }()
+    
+    // Item: is used for collectionViews
+    // Row: is used for tableViews
+    func nextPage() {
+        // We are on the last page
+        if pageControl.currentPage == pages.count {
+            return
+        }
+        
+        if pageControl.currentPage == pages.count - 1 {
+            moveControlConstraintsOffScreen()
+        }
+        
+        let indexPath = IndexPath(item: pageControl.currentPage + 1, section: 0)
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        pageControl.currentPage += 1
+        
+    }
     
     // Variable utilizada para esconder el page control al llegar a la ultima pagina
     var pageControlBottomAnchor: NSLayoutConstraint?
@@ -124,10 +147,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         // if we are in the last page
         if pageNumber == pages.count {
-            // we move 40 pixels to bottom
-            pageControlBottomAnchor?.constant = 40
-            skipControlTopAnchor?.constant = -40
-            nextControlTopAnchor?.constant = -40
+            moveControlConstraintsOffScreen()
         } else {
             // Regular pages
             pageControlBottomAnchor?.constant = 0
@@ -139,6 +159,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             self.view.layoutIfNeeded()
             }, completion: nil)
         
+    }
+    
+    fileprivate func moveControlConstraintsOffScreen() {
+        // we move 40 pixels to bottom
+        pageControlBottomAnchor?.constant = 40
+        skipControlTopAnchor?.constant = -40
+        nextControlTopAnchor?.constant = -40
     }
     
     fileprivate func registerCells() {
