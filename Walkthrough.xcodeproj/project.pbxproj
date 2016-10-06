@@ -17,6 +17,8 @@
 		27AD28C41D82649A0058612C /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AD28C31D82649A0058612C /* Page.swift */; };
 		27DC46ED1D945186009D1DC6 /* LoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DC46EC1D945186009D1DC6 /* LoginCell.swift */; };
 		27DC46F51D9EB71D009D1DC6 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DC46F41D9EB71D009D1DC6 /* MainNavigationController.swift */; };
+		27F4FFBE1DA606F400D8B3B9 /* UserDefaults+helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4FFBD1DA606F400D8B3B9 /* UserDefaults+helpers.swift */; };
+		27F4FFC01DA607BC00D8B3B9 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4FFBF1DA607BC00D8B3B9 /* HomeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		27AD28C31D82649A0058612C /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		27DC46EC1D945186009D1DC6 /* LoginCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCell.swift; sourceTree = "<group>"; };
 		27DC46F41D9EB71D009D1DC6 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		27F4FFBD1DA606F400D8B3B9 /* UserDefaults+helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+helpers.swift"; sourceTree = "<group>"; };
+		27F4FFBF1DA607BC00D8B3B9 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 				27AD28AF1D8262CC0058612C /* AppDelegate.swift */,
 				27AD28B11D8262CC0058612C /* LoginController.swift */,
 				27DC46F41D9EB71D009D1DC6 /* MainNavigationController.swift */,
+				27F4FFBF1DA607BC00D8B3B9 /* HomeController.swift */,
 				27AD28B31D8262CC0058612C /* Main.storyboard */,
 				27AD28B61D8262CC0058612C /* Assets.xcassets */,
 				27AD28B81D8262CC0058612C /* LaunchScreen.storyboard */,
@@ -75,6 +80,7 @@
 				27DC46EC1D945186009D1DC6 /* LoginCell.swift */,
 				27AD28C31D82649A0058612C /* Page.swift */,
 				271F08F61D924591003EEBFB /* Extensions.swift */,
+				27F4FFBD1DA606F400D8B3B9 /* UserDefaults+helpers.swift */,
 			);
 			path = Walkthrough;
 			sourceTree = "<group>";
@@ -153,8 +159,10 @@
 			files = (
 				271F08F71D924591003EEBFB /* Extensions.swift in Sources */,
 				27AD28B21D8262CC0058612C /* LoginController.swift in Sources */,
+				27F4FFBE1DA606F400D8B3B9 /* UserDefaults+helpers.swift in Sources */,
 				27AD28B01D8262CC0058612C /* AppDelegate.swift in Sources */,
 				27AD28C41D82649A0058612C /* Page.swift in Sources */,
+				27F4FFC01DA607BC00D8B3B9 /* HomeController.swift in Sources */,
 				27DC46F51D9EB71D009D1DC6 /* MainNavigationController.swift in Sources */,
 				27AD28C21D8264800058612C /* PageCell.swift in Sources */,
 				27DC46ED1D945186009D1DC6 /* LoginCell.swift in Sources */,
